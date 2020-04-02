@@ -12,4 +12,4 @@ Base.:(+)(x::AbstractMatrix, ::HC) = Hermitian(x + x')
 
 export hc
 
-end # module
+end
