@@ -4,7 +4,7 @@
 
 PlusHC.jl is a simple little utility offering a single export: ~hc~
 (standing for hermitian conjugate), whose only purpose is to turn the
-expression ~x + hc~ into ~x + x'~
+expression ~x + hc~ into ~x + adjoint(x)~
 
 #+BEGIN_SRC julia
 julia> using PlusHC
