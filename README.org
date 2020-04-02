@@ -24,4 +24,4 @@ julia> rand(5, 5) + hc
 
 [[file:assets/meme.png]]
 
-+ Meme credit to Eric Hanson on the Julia Zulip 
++ Meme credit to Eric Hanson on the [[https://julialang.zulipchat.com][Julia Zulip]] 
