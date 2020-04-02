@@ -2,3 +2,6 @@ name = "PlusHC"
 uuid = "cd731e1f-768d-4c10-b144-5251ec0945a2"
 authors = ["MasonProtter <mason.protter@icloud.com>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
