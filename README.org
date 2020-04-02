@@ -1,0 +1,27 @@
+#+STARTUP: inlineimages
+
+* PlusHC.jl
+
+PlusHC.jl is a simple little utility offering a single export: ~hc~
+(standing for hermitian conjugate), whose only purpose is to turn the
+expression ~x + hc~ into ~x + x'~.
+
+#+BEGIN_SRC julia
+julia> using PlusHC
+
+julia> (1 + im) + hc
+2
+
+julia> rand(5, 5) + hc
+5×5 Hermitian{Float64,Array{Float64,2}}:
+ 1.15628   0.76634   1.15419  0.779014  1.29548
+ 0.76634   0.748898  1.45221  1.13522   0.436974
+ 1.15419   1.45221   1.45785  1.22337   1.59717
+ 0.779014  1.13522   1.22337  1.44389   0.507414
+ 1.29548   0.436974  1.59717  0.507414  0.0963675
+#+END_SRC
+
+
+[[file:assets/meme.png]]
+
++ Meme credit to Eric Hanson on the Julia Zulip 
