@@ -1,24 +1,29 @@
 #+STARTUP: inlineimages
 
-* PlusHC.jl
+* Conjugates.jl
 
-PlusHC.jl is a simple little utility offering a single export: ~hc~
-(standing for hermitian conjugate), whose only purpose is to turn the
-expression ~x + hc~ into ~x + adjoint(x)~
+Conjugates.jl is a simple little utility for doing algebraic
+operations between an object and its 'conjugate', either Hermitian
+conjugate or transpose. Conjugates.jl exports ~hc~, standing for
+Hermitian conjugate and ~tp~, standing for transpose which act like algebraic objects
 
 #+BEGIN_SRC julia
-julia> using PlusHC
+julia> using Conjugates
 
 julia> (1 + im) + hc
 2
 
-julia> rand(5, 5) + hc
-5×5 Hermitian{Float64,Array{Float64,2}}:
- 1.15628   0.76634   1.15419  0.779014  1.29548
- 0.76634   0.748898  1.45221  1.13522   0.436974
- 1.15419   1.45221   1.45785  1.22337   1.59717
- 0.779014  1.13522   1.22337  1.44389   0.507414
- 1.29548   0.436974  1.59717  0.507414  0.0963675
+julia> randn(ComplexF64, 3, 3) + hc
+3×3 Hermitian{Complex{Float64},Array{Complex{Float64},2}}:
+   0.86551+0.0im         1.38105+0.506667im  -0.761315-0.211322im
+   1.38105-0.506667im   0.826828+0.0im       -0.764402-0.579842im
+ -0.761315+0.211322im  -0.764402+0.579842im  -0.629772+0.0im
+
+julia> randn(ComplexF64, 3, 3) * tp
+3×3 Symmetric{Complex{Float64},Array{Complex{Float64},2}}:
+   2.43339+0.0im        -1.48393-0.247791im  0.0867097+0.53651im
+  -1.48393-0.247791im    1.38745+0.0im       0.0606936-0.470711im
+ 0.0867097+0.53651im   0.0606936-0.470711im    2.14239+0.0im
 #+END_SRC
 
 
