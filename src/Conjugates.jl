@@ -1,4 +1,4 @@
-module PlusHC
+module Conjugates
 
 using LinearAlgebra
 
