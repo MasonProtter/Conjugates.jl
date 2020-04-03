@@ -9,9 +9,13 @@ A = randn(ComplexF64, 100, 100)
 @test ishermitian(A + hc)
 @test (A + hc) + hc ≈ 2(A + hc)
 @test A*hc ≈ A*A'
+@test x - hc ≈ 2imag(x)*im
+@test A - hc ≈ (A - A')
 
 @test x + tp == 2x
 @test A + tp ≈ A + transpose(A)
-@test isymmetric(A + tp)
+@test issymmetric(A + tp)
 @test (real(A) + tp) + tp ≈ 2(real(A) + tp)
 @test A*tp ≈ A*transpose(A)
+@test x - tp ≈ zero(x)
+@test A - tp ≈ (A - transpose(A))
