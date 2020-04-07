@@ -2,6 +2,11 @@
 
 * Conjugates.jl
 
+Conjugates is available on the general registry, simply
+#+BEGIN_SRC julia
+pkg> add Conjugates
+#+END_SRC
+
 Conjugates.jl is a simple little utility for doing algebraic
 operations between an object and its 'conjugate', either Hermitian
 conjugate or transpose. Conjugates.jl exports ~hc~, standing for
