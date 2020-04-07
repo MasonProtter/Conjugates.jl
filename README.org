@@ -2,7 +2,7 @@
 
 * Conjugates.jl
 
-Conjugates is available on the general registry, simply
+Conjugates is available on the general registry. To install, simply do
 #+BEGIN_SRC julia
 pkg> add Conjugates
 #+END_SRC
